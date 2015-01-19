@@ -1,0 +1,7 @@
+div: id="logo"
+ a: href="/page/home?who=5"
+  h3: "Ian Howie"
+# site=req.user.get_site(parent=1)
+# if site:
+#  a: href=req.user.can('admin page') and site.url('edit_logo') or (self.Config.logolink or ("http://"+req.get_host()))
+#   img: src=site.get_logo_url()

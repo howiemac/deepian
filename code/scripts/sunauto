@@ -1,0 +1,3 @@
+wget --no-cookies --header "Cookie: evokeID=howiemac:rosary108" "http://spiritualsun.org/evoke/Page/1798/get_feed" -O - >> sunauto.log
+
+

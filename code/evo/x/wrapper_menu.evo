@@ -1,0 +1,37 @@
+# menu / "navpanel"
+div: id='navpanel' 
+ ul:
+  for uid in (4031,2134,3819):
+    group=req.user.Page.get(uid)
+    page=(self.__class__.__name__=="Page") and ((self.uid==group.uid) or (self.lineage.find(".%s." % group.uid)>=0))
+    li:
+     a: group.name, href=group.url(), title=group.name
+     if page:
+      if (uid==3819):
+       for cat in group.get_child_pages(req,first=20):
+        if cat.get_pref('in_menu'):
+         li: cls="cat"
+          a: cat.name, href=cat.url(), title=cat.name
+      else:
+       arts= group.get_child_pages(req,first=20,descend=True)
+       for art in arts:
+        if art and (art.rating>=0):
+         li: cls="cat"
+          a: art.name, href=art.url(), title=art.name
+    if (uid==4031):
+     li:
+      a:"subscribe",href="http://feedburner.google.com/fb/a/mailverify?uri=deepian", title="get email alerts for new posts", target="_blank" 
+#  li:
+#   a:"about me", href=self.abs_url("home?who=5"), title='who is deepian?'
+#   a:"subscribe",href="http://feeds.feedburner.com/deepian", title="get updates for new posts", target="_blank" 
+#  li:
+#   a:'yondbe', href="http://yondbe.com", title='going beyond'
+#  li:
+#   a:'transformation', href="http://change.deepian.com", title='teachings on self-transformation'
+  li:
+   a:"on twitter", href="https://twitter.com/deepian" , target="_blank", title="@deepian"
+#  li:
+#   a:"on google+", href="https://plus.google.com/102407011600863059881/posts", target="_blank", title="+Ian Howie Mackenzie"
+#  if self.Config.links:
+#   li:
+#    a:'other links',href=req.user.abs_url('links'), title='external links'
