@@ -17,7 +17,7 @@ default_class="Page"
 registration_method="admin" # "admin" : admin has to register each user                                                                    
                               # "approve" : online self registration with approval by admin 
 
-page_default=4031 #home page is deepian blog
+default_page=4031 #home page is deepian blog
 
 urlpath=""  # no /evoke in url
 
