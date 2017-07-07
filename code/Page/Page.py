@@ -39,7 +39,7 @@ class Page(basePage):
     "publish this page, if it is posted and of kind 'page'"
     if self.kind=="page" and self.stage=="posted":
       self.save_flat_page(self.view(req))
-      req.message="page published at %s" % self.file_loc()
+      req.message="page published at <a href={0}>{0}</a>".format(self.file_url())
   publish_page.permit="no way"
 
   def publish(self,req):
