@@ -1,4 +1,4 @@
-/*
+
 body {
 font-weight:normal;
 }
@@ -39,20 +39,20 @@ font-size:smaller
 font-weight:normal;
 }
 
+.navbar-nav li a {
+padding:10px;
+}
+
 #pageoptions li a:hover {
 text-decoration:none;
 }
 
-
-
 .acts img, .editacts img {
 height:16px;
 }
-
 
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
  #logo{float:none}
  #controls {top:auto}
 } 
 
-*/

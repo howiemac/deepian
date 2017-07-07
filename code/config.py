@@ -17,11 +17,15 @@ default_class="Page"
 registration_method="admin" # "admin" : admin has to register each user                                                                    
                               # "approve" : online self registration with approval by admin 
 
-default_page=4031 #home page is deepian blog
+#default_page=4031 #home page is deepian blog
+default_page=1 #home page is root
 
 urlpath=""  # no /evoke in url
 
 pagetabs=True
+
+#publishing
+folder="~/www/"
 
 from base.data.schema import *
 
