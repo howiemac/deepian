@@ -19,9 +19,9 @@ class Page(basePage):
       links.append(
         (p.name,p.url(),p.name)
         )
-    links.append(("subscribe","http://feedburner.google.com/fb/a/mailverify?uri=deepian","get email alerts for new posts"))
+#    links.append(("subscribe","http://feedburner.google.com/fb/a/mailverify?uri=deepian","get email alerts for new posts"))
     links.append(("deepian on twitter","http://twitter.com/deepian","@deepian"))
-    links.append(("help","/7","evoke help"))
+#    links.append(("help","/7","evoke help"))
     return links
 
 
