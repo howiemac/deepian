@@ -14,15 +14,27 @@ class Page(basePage):
   def get_navbar_links(self):
     "override the base version..."
     links=[("home","/","latest posts")]
+    home=self.get(1)
     for uid in (4031,2134,3819):
       p=self.get(uid)
       links.append(
         (p.name,p.url(),p.name)
         )
+    links.append(("favourites",home.url("favourites"),"deepian's favourite posts"))
+    links.append(("BapDada's teachings","http://bapdada.deepian.uk","the teachings of Avyakt BapDada"))
 #    links.append(("subscribe","http://feedburner.google.com/fb/a/mailverify?uri=deepian","get email alerts for new posts"))
     links.append(("deepian on twitter","http://twitter.com/deepian","@deepian"))
 #    links.append(("help","/7","evoke help"))
     return links
+
+  def favourites(self,req):
+    "top rated pages, in date order"
+    lim=page(req,50)
+    req.pages=self.list(kind="page",stage="posted",rating=2,orderby="`when` desc",limit=lim)
+    req.title="favourites"
+    req.prep="from"
+    req.page='favourites' # for paging
+    return self.listing(req)
 
 
 ################# publishing (test) ####################
