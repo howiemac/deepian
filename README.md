@@ -1,2 +1,2 @@
 # deepian
-deepian site app
+EVOKE app for deepian blog

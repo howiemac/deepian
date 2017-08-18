@@ -29,7 +29,7 @@ pagetabs=True
 #publishing
 folder="~/www/"
 
-from base.data.schema import *
+#from base.data.schema import *
 
 #class Test(Schema):
 #  pass
