@@ -15,7 +15,7 @@ class Page(basePage):
     "override the base version..."
     links=[("home","/","latest posts")]
     home=self.get(1)
-    for uid in (4031,2134,3819):
+    for uid in (4031,3819,4405,3506,2134):
       p=self.get(uid)
       links.append(
         (p.name,p.url(),p.name)
