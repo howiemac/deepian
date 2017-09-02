@@ -1,10 +1,10 @@
 """
-override class for base.page
+override class for evoke.page
 
 """
-from base.render import html
-from base.lib import *
-from base.Page import Page as basePage
+from evoke.render import html
+from evoke.lib import *
+from evoke.Page import Page as basePage
 
 import os, string
 
@@ -12,7 +12,7 @@ import os, string
 class Page(basePage):
 
   def get_navbar_links(self):
-    "override the base version..."
+    "override the evoke version..."
     links=[("home","/","latest posts")]
     home=self.get(1)
     for uid in (4031,3819,4405,3506,2134):

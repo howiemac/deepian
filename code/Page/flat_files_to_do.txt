@@ -1,6 +1,6 @@
 see flat file publishing code in Page.py in this folder...
 
-this following code was inserted in base/serve/dispatch.py  at line 55: 
+this following code was inserted in evoke/serve/dispatch.py  at line 55: 
 
     # special case for serving up flat files ---- INCOMPLETE - depend
     if config.flat_files and req.user.is_guest() and uri_type=="obj" and cls=="" and method=="":
@@ -8,12 +8,12 @@ this following code was inserted in base/serve/dispatch.py  at line 55:
 
 - really should be inserted at line 57, after default class is set (and looking for cls=="Page"), as flat-files is page specific
 
-- not completed - as tricky to get at the necessary base/Page/File.py line 67 File_folder() function
-- and makes UNSAFE assumptions that default_class is Page (which is not the case for Base, only for my apps)
-- problems is I can't override base/serve/dispatch.py at app level... (Can I??)
+- not completed - as tricky to get at the necessary evoke/Page/File.py line 67 File_folder() function
+- and makes UNSAFE assumptions that default_class is Page (which is not the case for evoke, only for my apps)
+- problems is I can't override evoke/serve/dispatch.py at app level... (Can I??)
 
-see also evoke/deepian/code/config.py for default_class and <proposed> flat_files Config settings
-- and base/Page/config.py for <proposed> flat_files Config setting
+see also deepian/code/config.py for default_class and <proposed> flat_files Config settings
+- and evoke/Page/config.py for <proposed> flat_files Config setting
 
  really the flat file serving needs its own one-purpose small stand alone server app, serving up only flat files
 

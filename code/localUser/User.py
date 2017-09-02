@@ -3,9 +3,9 @@
     auto login as admin, no security checking
 """
 
-#from base import lib
-#from base.render import html
-from base.User import User as baseUser
+#from evoke import lib
+#from evoke.render import html
+from evoke.User import User as baseUser
 
 class User(baseUser):
 

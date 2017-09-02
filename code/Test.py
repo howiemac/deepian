@@ -1,7 +1,7 @@
 """ 
 """
 
-from base.render import template 
+from evoke.render import template 
 
 class Test(object):
 
