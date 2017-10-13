@@ -1,4 +1,4 @@
 """
-deep system app module 
+deepian evoke app module 
 """
 

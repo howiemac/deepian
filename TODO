@@ -1,7 +1,0 @@
-- links => versere
-- put live 
-  - git commit & push / pull onto new server
-  - re-copy data from thinkpad to new server
-  - dump database from thinkpad &  load onto new server
-  - test
-  - put live (switch domain)
