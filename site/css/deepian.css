@@ -1,27 +1,35 @@
 
+/*
 body {
 font-weight:normal;
 }
+*/
 
 /* h1, h2, h3, h4, h5, h6 { 
 font-weight:normal;
 } */
 
+/*
 #logo {
 margin:20px 0 5px 10px
 }
+*/
 
+/*
 #searchform input {
  background-color:#FFF;
  background-image:none;
  color:#888;
  border-color:#AAA;
 }
-
+*/
+/*
 #credits {
  text-align:left;
 }
+*/
 
+/*
 #navpanel a {
 color:#AAA;
 }
@@ -42,17 +50,23 @@ font-weight:normal;
 .navbar-nav li a {
 padding:10px;
 }
+*/
 
+/*
 #pageoptions li a:hover {
 text-decoration:none;
 }
+*/
 
+/*
 .acts img, .editacts img {
 height:16px;
 }
+*/
 
+/*
 @media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
  #logo{float:none}
  #controls {top:auto}
 } 
-
+*/
