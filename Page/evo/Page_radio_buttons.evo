@@ -1,0 +1,61 @@
+form: action=self.url('radio_buttons')
+ div: cls="row col-12"
+  div: id='first', cls="btn-group btn-group-lg btn-group-toggle", data_toggle="buttons"
+   for option in ("option1", "option2", "option3"):
+     label: cls= "btn %s" % ("btn-success active" if req.myoption==option else "btn-secondary")
+       input: type="radio", name="myoption", value=option, checked= "checked" if req.option==option else ""
+       option
+
+ div: cls="row col-12"
+  div: id='first', cls="btn-group btn-group-lg btn-group-toggle", data_toggle="buttons"
+   for option in ("thing1", "thing2", "thing3"):
+     label: cls= "btn %s" % ("btn-success active" if req.thing==option else "btn-secondary")
+       input: type="radio", name="thing", value=option, checked= "checked" if req.option==option else ""
+       "&nbsp;%s&nbsp;" % option
+
+ div:
+   input: name='test', value='Scotland', type='hidden'
+
+ div: cls="row col-12"
+   button: 'OK', typ='submit', cls='btn btn-primary'
+
+# change btn-secondary to btn-success when active...
+script: "$(':radio').change(function(){\
+    $(this).parents('.btn-group').children('label').attr('class','btn btn-secondary');\
+    $(this).parent().attr('class','btn btn-success');\
+    });"
+
+
+
+
+#   $(this).parents('btn-group').attr('class','btn btn-success');\
+
+#   $(':checked').parent().attr('class','btn btn-success');\
+#    });"
+
+#    $(':radio').parent().attr('class','btn btn-secondary');\
+
+
+#    $(this).parent().attr('class','btn btn-success');\
+
+
+#script: "$(':radio').change(function(){\
+#    var $label = $(this);\
+#    $label.parent().attr('class','btn btn-success');\
+#    alert('option2 checked? '+$('#option2').prop('checked'));\
+#    });"
+
+#    alert('checked? '+$label.prop('checked'));\
+#    });"
+
+
+#    $(':radio').parent().attr('class','btn btn-secondary');\
+#    $(':radio').prop('checked').parent().attr('class','btn btn-success');\
+#    });"
+
+
+#script:'$( ":radio" ).change(function() {alert( "Handler for .change() called." );});'
+
+
+#script: "$(function(){$(':radio').click(function(){$(':radio).prop('checked') });})"
+

@@ -65,3 +65,15 @@ class Page(basePage):
     req.user=self.User.fetch_user("admin")
     return self.view(req)
   publish_page.permit="admin page"
+
+
+################## test code ####################
+
+  @html
+  def radio_buttons(self,req):
+    ""
+    if req.myoption or req.thing:
+      req.message='option=%s  thing=%s test=%s' % (req.myoption, req.thing, req.test)
+#      return self.view(req)
+
+
